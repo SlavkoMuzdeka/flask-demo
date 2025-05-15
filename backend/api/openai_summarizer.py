@@ -4,7 +4,7 @@ import logging
 from openai import OpenAI
 from typing import Optional
 from dotenv import load_dotenv
-from utils.openai_utils import (
+from openai_utils import (
     chunk_on_delimiter,
     get_chat_completion,
     num_tokens_from_text,
