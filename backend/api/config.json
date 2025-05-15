@@ -1,0 +1,21 @@
+{
+  "debug": true,
+  "whisper": {
+    "model": "base",
+    "transcrition_ext": ".txt",
+    "downloads_dir": "downloads"
+  },
+  "youtube": {
+    "mp3_ext": ".mp3",
+    "metadata_ext": ".info.json",
+    "downloads_dir": "downloads"
+  },
+  "rss_feed": {
+    "mp3_ext": ".mp3",
+    "chunk_size": 8192,
+    "downloads_dir": "downloads"
+  },
+  "openai": {
+    "model": "gpt-4.1"
+  }
+}
