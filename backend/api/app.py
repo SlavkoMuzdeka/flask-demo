@@ -5,10 +5,6 @@ import logging
 from flask_cors import CORS
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
-from models.downloaders.yt_downloader import YT_Downloader
-from models.summarizers.openai_summarizer import OpenAI_Summarizer
-from models.downloaders.rss_feed_downloader import RSS_Feed_Downloader
-from models.transcribers.whisper_transcriber import Whisper_Transcriber
 
 # Load env & config
 load_dotenv(override=True)
@@ -23,10 +19,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-yt_downloader = YT_Downloader(config=config)
-summarizer = OpenAI_Summarizer(config=config)
-transcriber = Whisper_Transcriber(config=config)
-rss_downloader = RSS_Feed_Downloader(config=config)
+yt_downloader = None
+summarizer = None
+transcriber = None
+rss_downloader = None
 
 app = Flask(__name__)
 CORS(app, origins=[os.getenv("FRONTEND_URL")])
