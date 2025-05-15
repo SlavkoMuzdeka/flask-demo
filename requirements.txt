@@ -1,8 +1,9 @@
-flask
+requests
+feedparser
 yt_dlp
 openai
-tiktoken
-requests
-flask_cors
-feedparser
 python-dotenv
+tiktoken
+flask
+flask_cors
+pydub
